@@ -1,0 +1,6 @@
+fastapi
+aexl-memory-storage
+uvicorn
+aexlutils
+pydantic
+redis

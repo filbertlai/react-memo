@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  nginx:
+    image: nginx:latest
+    container_name: webserver
+    ports:
+      - "7777:80"
+    restart: always
+    environment:
+      - TZ=Asia/Hong_Kong
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 250M
+    volumes:
+      - ./dist:/usr/share/nginx/html
